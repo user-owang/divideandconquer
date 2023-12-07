@@ -1,6 +1,7 @@
 function countZeroes(arr) {
   let n = findBreak(arr);
-  if ((n = -1)) {
+  if (n === -1) {
+    console.log("test");
     return 0;
   }
   return arr.length - n;
@@ -14,7 +15,7 @@ function findBreak(arr) {
   } else if (arr[right] === 1) {
     return -1;
   }
-  while (left > right) {
+  while (left <= right) {
     let mid = Math.floor((left + right) / 2);
     if (arr[mid] === 0) {
       if (arr[mid - 1] === 1) {
